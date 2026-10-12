@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Ludo Royal</title>
+<meta name="description" content="Ludo Royal : le jeu de Ludo en ligne et hors ligne, contre l'ordinateur, entre amis ou en ligne.">
+<meta name="theme-color" content="#1b1f3b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <section id="menu" class="screen">
+    <div class="top">
+      <div class="wallet"><span id="coins">🪙 0</span><span id="gems">💎 0</span></div>
+      <button class="icon" id="btnSettings" aria-label="Réglages">⚙️</button>
+    </div>
+    <div class="logo"><img class="die" src="icons/icon-192.png" width="96" height="96" alt=""><h1>Ludo <span>Royal</span></h1><p>Le grand classique, en version royale</p></div>
+    <div class="buttons">
+      <button class="btn big" data-mode="cpu">🤖 Contre l'ordinateur</button>
+      <button class="btn big" data-mode="local">👨‍👩‍👧 Entre amis (même écran)</button>
+      <button class="btn big" data-mode="online">🌍 En ligne avec des amis</button>
+      <button class="btn big alt" data-mode="rush">⚡ Ludo Rush (1 pion)</button>
+      <div class="row2">
+        <button class="btn" id="btnShop">🛍️ Boutique</button>
+        <button class="btn" id="btnInstall" hidden>📲 Installer</button>
+        <button class="btn" id="btnHow">❓ Règles</button>
+      </div>
+    </div>
+    <div class="banner" id="bannerMenu"></div>
+  </section>
+
+  <section id="game" class="screen hidden">
+    <div class="top">
+      <button class="icon" id="btnPause" aria-label="Menu">☰</button>
+      <div class="wallet small"><span id="gems2">💎 0</span></div>
+    </div>
+    <div id="players"></div>
+    <div id="boardWrap"><canvas id="board"></canvas><div id="floats"></div></div>
+    <div class="controls">
+      <div id="dice" class="dice" role="button" aria-label="Lancer le dé"></div>
+      <div class="side">
+        <div id="status">…</div>
+        <button class="btn small" id="btnReroll" hidden>🔄 Relancer · 💎1</button>
+      </div>
+    </div>
+    <div id="emojis"></div>
+    <div class="banner" id="bannerGame"></div>
+  </section>
+</div>
+<div id="modal" class="modal"><div class="card" id="modalCard"></div></div>
+
+<script src="js/engine.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ads.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

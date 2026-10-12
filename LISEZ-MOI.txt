@@ -1,0 +1,2 @@
+Rire moqueur personnalisé (optionnel) : déposez ici un fichier "laugh.mp3" (1 à 2 secondes).
+S'il est présent, il remplace le rire synthétisé. Utilisez un son libre de droits ou enregistré par vous.
